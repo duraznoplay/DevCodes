@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevCodes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .search-container { position: relative; display: flex; align-items: center; margin-left: 28px;} 
+    .search-container input { width: 0; opacity: 0; transition: width 0.3s ease, opacity 0.3s ease; border: none; outline: none; background-color: #0c1117; color: white; padding: 0.5rem; border-radius: 5px; } 
+    .search-container input:focus { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); } 
+    .search-container.active input { width: 200px; opacity: 1; } 
+    .search-btn { background-color: transparent; border: none; color: white; font-size: 1.2rem; cursor: pointer; }
+  </style>
+</head>
+<body style="background-color: #0c1117; color: white;">
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #0c1117;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: cornsilk; color: transparent;" >
+        <span class="bi bi-list-nested" style="color: aliceblue;" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" style="margin: 33px;">
+          <li class="nav-item me-4">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link text-white" href="conocenos.html">Conócenos</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link text-white" href="#">Servicios</a>
+          </li>
+          <li class="nav-item me-4">
+            <a class="nav-link text-white" href="portafolio.html">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contáctanos</a>
+          </li>
+        </ul>
+        <div class="search-container me-5">
+          <button class="search-btn" onclick="toggleSearch()">
+            <i class="bi bi-search"></i>
+          </button>
+          <input type="text" placeholder="Search...">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    function toggleSearch() {
+      const container = document.querySelector('.search-container');
+      container.classList.toggle('active');
+      const input = container.querySelector('input');
+      if (container.classList.contains('active')) {
+        input.focus();
+      } else {
+        input.value = ''; 
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <div style="display: flex; flex-direction: row; align-items: flex-start; position: relative;" data-aos="fade-up">
+
+    <div style="flex: 1; display: flex; justify-content: flex-start; position: relative;" data-aos="fade-up">
+      <img src="/Imagenes/baner3.png" alt="Imagen Izquierda" style="width: 100%; max-width: 700px; height: auto; margin-top: 80px; border-top-right-radius: 60px;">
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 30%; background: linear-gradient(to bottom, rgba(12, 17, 23, 0) 0%, #0c1117 100%);"></div>
+  
+
+      <div class="responsive-container" style="position: absolute; top: 20%; left: 10%; text-align: left; margin-top: 7vb;">
+        <p class="t" style="font-size: 4vw; color: white; margin: 0; font-weight: bold;">Innovamos</p> 
+        <p class="t" style="font-size: 4vw; color: white; margin: 0; font-weight: bold;">Creamos</p>
+        <p class="t" style="font-size: 4vw; color: white; margin: 0; font-weight: bold;">Transformamos</p>
+      </div>
+    </div>
+  
+    <div style="flex: 1; display: flex; justify-content: flex-end; position: relative;" data-aos="fade-up">
+      <img src="/Imagenes/baner3.1.png" alt="Imagen Derecha" style="width: 80%; max-width: 700px; height: auto; margin-top: 80px; border-top-left-radius: 60px; margin-top: 18vb;">
+    </div>
+  </div>
+  
+  <style>
+    @media (max-width: 768px) {
+      .responsive-container { top: 30%; left: 5%; }
+      .t { font-size: clamp(16px, 5vw, 4vw); }
+      
+      div[style*="display: flex"] { flex-direction: column; align-items: center; text-align: center; }
+      div[style*="justify-content: flex-start"] img, div[style*="justify-content: flex-end"] img { max-width: 90%; }
+      .responsive-container { margin: 18vh 0 0 10vw; }
+    .text-container { margin: 5vh 0 0 8vw; }
+    .text-container p { font-size: clamp(10px, 2vw, 10px); }
+    .boton-info button { font-size: 14px; padding: 6px 12px; max-width: 150px; }
+    }
+  </style>
+  
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500, 
+      once: true 
+    });
+  </script>
+
+
+<div class="about-section" style="display: flex; flex-direction: row-reverse; align-items: flex-start; margin-top: 20vh;">
+  <div class="imagen" style="flex: 1; display: flex; position: relative; margin-left: 18vw; ;">
+      <img src="/Imagenes/pc.png" alt="DevCode Image" style="width: 100%; max-width: 400px; height: auto;">
+  </div>
+
+  <div style="flex: 1;">
+
+      <div class="text-container" style="position: relative; margin: 2vh 0 0 14vw; width: 80%; text-align: left;">
+        <p class="t" style="font-size: 125%; color: white; margin: 0;"><strong>¿Quienes Somos?</strong></p> <br>
+
+        <p style="color: white; line-height: 1.6; margin: 0;">Somos Devscode, una empresa de desarrollo web y tecnología enfocada en construir experiencias digitales de alto impacto.</p>
+        <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">Desde startups hasta grandes empresas, llevamos las ideas al siguiente nivel con soluciones tecnológicas diseñadas para dominar el mercado.</p><br>
+        <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>Desarrollo Web Personalizado</strong> – Creamos sitios web que no solo lucen bien, sino que generan resultados.</p>
+        <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>UX/UI de Alto Nivel</strong> – Diseños intuitivos, atractivos y centrados en el usuario.</p>
+        <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>SEO & Rendimiento</strong> – Optimizamos cada detalle para posicionarte en lo más alto.</p>
+        <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>Estrategias Digitales</strong> – Desde branding hasta conversión, potenciamos tu crecimiento.</p>
+      </div>
+      <div class="boton-info" style="position: relative; margin: 5vh 0 0 14vw; width: 50%; text-align: left;">
+        <a href="pagina-destino.html">
+          <button style="padding: 8px 15px; border-radius: 5px; background: radial-gradient(circle, #007cba, #0055ff); color: white; font-size: 10px; font-weight: bold; border: none; cursor: pointer; box-shadow: 0 0 10px #0a76ac, 0 0 20px #0055ff; transition: 0.3s; text-align: left; width: auto; max-width: 200px;">Crea Con Nosotros</button>
+        </a>
+      </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) { .about-section { margin-top: 10vh !important; } }
+
+  .imagen{ margin-top: 18vh;}
+
+</style>
+
+
+<div style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 10vh;" data-aos="fade-up">
+  <p class="What" style="font-size: 150%; color: white; margin: 0; margin-bottom: 50px;"><strong>Nuestra Esencia</strong></p>
+</div>
+
+<div class="d-flex justify-content-center align-items-center mt-4">
+  <button class="carousel-control-prev position-static me-3" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" style="max-width: 390px; margin-bottom: 15vh;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col" data-aos="fade-up">
+              <div class="card h-100 bg-dark text-white" style="border-radius: 5px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body d-flex flex-column text-center" style="padding-bottom: 100px;">
+                  <h5 class="card-title">MISIÓN</h5>
+                  <p>Crear soluciones digitales de alto rendimiento, escalables y centradas en el usuario, ayudando a empresas y emprendedores a destacar en la era digital.</p>
+                  <a href="#" class="text-white">Contáctanos</a>
+                </div>
+                <div style="position: absolute; bottom: 0; right: 0; background-color: #0056ff; width: 120px; height: 120px; border-top-left-radius: 120px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-trophy" style="font-size: 40px; color: white; margin-left: 30px;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col" data-aos="fade-up">
+              <div class="card h-100 bg-dark text-white" style="border-radius: 5px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                <div class="card-body d-flex flex-column text-center" style="padding-bottom: 100px;">
+                  <h5 class="card-title">VISIÓN</h5>
+                  <p>Ser referentes en innovación digital, proporcionando soluciones tecnológicas que impulsen el éxito y crecimiento sostenible de nuestros clientes.</p>
+                  <a href="#" class="text-white">Contáctanos</a>
+                </div>
+                <div style="position: absolute; bottom: 0; right: 0; background-color: #0056ff; width: 120px; height: 120px; border-top-left-radius: 120px; display: flex; align-items: center; justify-content: center;">
+                  <i class="bi bi-trophy" style="font-size: 40px; color: white; margin-left: 30px;"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-next position-static ms-3" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+ <div>
+
+
+  <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; padding: 50px;" data-aos="fade-up">
+    <div style="flex: 1; max-width: 400px;">
+      <img src="/Imagenes/pilar.png" alt="Imagen Izquierda" style="width: 100%; height: auto; margin-top: 0px; border-top-right-radius: 60px;">
+    </div>
+    <div class="text-container" style="position: relative; margin: 0 0 0 0; max-width: 600px; text-align: left;">
+
+      <p class="What" style="font-size: 125%; color: white; margin: 0;"><strong>Nuestra Filosofia</strong></p><br>
+      <p style="color: white; line-height: 1.6; margin: 0;">Somos Devscode, una empresa de desarrollo web y tecnología enfocada en construir experiencias digitales de alto impacto.</p>
+      <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">Desde startups hasta grandes empresas, llevamos las ideas al siguiente nivel con soluciones tecnológicas diseñadas para dominar el mercado.</p><br>
+      <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>Desarrollo Web Personalizado</strong> – Creamos sitios web que no solo lucen bien, sino que generan resultados.</p>
+      <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>UX/UI de Alto Nivel</strong> – Diseños intuitivos, atractivos y centrados en el usuario.</p>
+      <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>SEO & Rendimiento</strong> – Optimizamos cada detalle para posicionarte en lo más alto.</p>
+      <p style="color: white; line-height: 1.6; margin: 10px 0 0 0;">🔹 <strong>Estrategias Digitales</strong> – Desde branding hasta conversión, potenciamos tu crecimiento.</p>
+    </div>
+  </div>
+  
+  <div style="background-color: #0c1117; color: white; margin-top: 50px;">
+    <div class="stats-container" style="background-color: #007bff; padding: 80px 20px; display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+      <div class="stat-item" style="text-align: center; color: white;">
+        <h1 style="margin: 0; font-size: 2.5rem; font-weight: bold;">9854</h1>
+        <p style="margin: 5px 0 0; font-size: 1rem; font-weight: 300; color: #d0e7ff91;">PROJECTS COMPLETED</p>
+      </div>
+      <div class="stat-item" style="text-align: center; color: white;">
+        <h1 style="margin: 0; font-size: 2.5rem; font-weight: bold;">840</h1>
+        <p style="margin: 5px 0 0; font-size: 1rem; font-weight: 300; color: #d0e7ff91;">CLIENTS</p>
+      </div>
+      <div class="stat-item" style="text-align: center; color: white;">
+        <h1 style="margin: 0; font-size: 2.5rem; font-weight: bold;">321</h1>
+        <p style="margin: 5px 0 0; font-size: 1rem; font-weight: 300; color: #d0e7ff91;">ACTIVE CLIENTS</p>
+      </div>
+      <div class="stat-item" style="text-align: center; color: white;">
+        <h1 style="margin: 0; font-size: 2.5rem; font-weight: bold;">5410</h1>
+        <p style="margin: 5px 0 0; font-size: 1rem; font-weight: 300; color: #d0e7ff91;">CUPS OF COFFEE</p>
+      </div>
+      <div class="stat-item" style="text-align: center; color: white;">
+        <h1 style="margin: 0; font-size: 2.5rem; font-weight: bold;">9854</h1>
+        <p style="margin: 5px 0 0; font-size: 1rem; font-weight: 300; color: #d0e7ff91;">PROJECTS COMPLETED</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    AOS.init({ duration: 500, once: true });
+  </script>
+
+<div style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 15vh;" data-aos="fade-up">
+  <p class="What" style="font-size: 125%; color: white; margin: 0;"><strong>¿Qué hacemos?</strong></p>
+</div>
+
+<div id="informacion" class="container-fluid" style="margin-top: 50px; margin-bottom: 75px;">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+    
+    <div class="col" data-aos="fade-up">
+      <div class="card h-100 bg-dark text-white" style="border-radius: 5px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-body d-flex flex-column text-center" style="padding-bottom: 100px;">
+          <h5 class="card-title">Objetivos a corto plazo (1-2 años):</h5>
+          <p>🔹 Posicionarnos como la mejor opción para startups y PYMEs en búsqueda de soluciones web de alto nivel.</p>
+          <p>🔹 Expandir nuestros servicios y ofrecer integraciones avanzadas de IA y automatización.</p>
+          <p>🔹 Mejorar la experiencia de usuario en cada solución digital.</p>
+        </div>
+        <div style="position: absolute; bottom: 0; right: 0; background-color: #0056ff; width: 120px; height: 120px; border-top-left-radius: 120px; display: flex; align-items: center; justify-content: center;">
+          <i class="bi bi-robot" style="font-size: 40px; color: white; margin-left: 30px;"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" data-aos="fade-up">
+      <div class="card h-100 bg-dark text-white" style="border-radius: 5px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-body d-flex flex-column text-center" style="padding-bottom: 100px;">
+          <h5 class="card-title">Objetivos a mediano plazo (3-5 años):</h5>
+          <p>🔹 Abrir oficinas en diferentes regiones para atender mercados internacionales.</p>
+          <p>🔹 Crear herramientas propias para optimizar el desarrollo digital y estrategias de marketing.</p>
+          <p>🔹 Ser referentes en tecnología web en Latinoamérica y EE.UU.</p>
+        </div>
+        <div style="position: absolute; bottom: 0; right: 0; background-color: #0056ff; width: 120px; height: 120px; border-top-left-radius: 120px; display: flex; align-items: center; justify-content: center;">
+          <i class="bi bi-robot" style="font-size: 40px; color: white; margin-left: 30px;"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" data-aos="fade-up">
+      <div class="card h-100 bg-dark text-white" style="border-radius: 5px; position: relative; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+        <div class="card-body d-flex flex-column text-center" style="padding-bottom: 100px;">
+          <h5 class="card-title">Objetivos a largo plazo (5-10 años):</h5>
+          <p>🔹 Consolidarnos como una empresa líder en tecnología y desarrollo web a nivel mundial.</p>
+          <p>🔹 Implementar inteligencia artificial en nuestros procesos y servicios.</p>
+          <p>🔹 Expandir nuestro ecosistema digital con plataformas propias.</p>
+        </div>
+        <div style="position: absolute; bottom: 0; right: 0; background-color: #0056ff; width: 120px; height: 120px; border-top-left-radius: 120px; display: flex; align-items: center; justify-content: center;">
+          <i class="bi bi-robot" style="font-size: 40px; color: white; margin-left: 30px;"></i>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="p">
+  <div style="display: flex; justify-content: center; align-items: center; text-align: center; margin-top: 30vh;">
+    <p class="What" style="font-size: 5vb; color: white; margin: 0;"><strong>Contáctanos</strong></p>
+  </div>
+</div>
+
+<style>.p { margin: 0; font-family: Arial, sans-serif; background-color: #0c1117; color: white; } .contact-section { max-width: 1200px; margin: auto; padding: 50px 20px; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; } .contact-form { flex: 1; } .contact-form label { display: block; font-size: 1.2rem; margin-bottom: 5px; } .contact-form input, .contact-form textarea { width: 100%; background: none; border: none; border-bottom: 1px solid #555; color: white; font-size: 1rem; margin-bottom: 20px; padding: 8px 5px; outline: none; } .contact-form button { background-color: #007bff; border: none; padding: 15px 30px; color: white; font-size: 1rem; border-radius: 5px; cursor: pointer; display: block; margin: auto; } .contact-info { flex: 1; display: flex; flex-direction: column; gap: 20px; } .info-item { display: flex; align-items: center; gap: 15px; } .info-item span { font-size: 1rem; } .info-item button { background-color: #007bff; border: none; padding: 8px 15px; color: white; font-size: 1rem; border-radius: 5px; cursor: pointer; } .social-icons { display: flex; gap: 15px; margin-top: 20px; } .social-icons a { color: white; font-size: 1.5rem; text-decoration: none; } .contact-info .info-icon { font-size: 1.5rem; } @media (max-width: 768px) { .contact-section { flex-direction: column; gap: 40px; } }</style>
+
+<div class="contact-section">
+<div class="contact-form">
+  <label for="name">Nombre</label>
+  <input type="text" id="name" placeholder="Name here">
+  <label for="lastname">Apellido</label>
+  <input type="text" id="lastname" placeholder="Last name here">
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="Example@mail.com">
+  <label for="message">Mensaje</label>
+  <textarea id="message" rows="4" placeholder="Start typing"></textarea>
+  <button style="padding: 8px 15px; border-radius: 5px; background: radial-gradient(circle, #007cba, #0055ff); color: white; font-size: 10px; font-weight: bold; border: none; cursor: pointer; box-shadow: 0 0 10px #0a76ac, 0 0 20px #0055ff; transition: 0.3s; text-align: left; width: auto; max-width: 200px;">
+    Enviar Mensaje
+</button>
+</div>
+<div class="contact-info">
+  <div class="info-item">
+    <i class="bi bi-telephone"></i>
+    <span>Número de teléfono</span>
+    <button style="padding: 8px 15px; border-radius: 5px; background: radial-gradient(circle, #007cba, #0055ff); color: white; font-size: 10px; font-weight: bold; border: none; cursor: pointer; box-shadow: 0 0 10px #0a76ac, 0 0 20px #0055ff; transition: 0.3s; text-align: left; width: auto; max-width: 200px;">
+      Llamar
+  </button>
+  </div>
+  <div class="info-item">
+    <i class="bi bi-envelope-at"></i>
+    <span>E-mail: info.devcode@protonmail.com</span>
+  </div>
+  <div class="info-item">
+    <i class="bi bi-pin-map"></i>
+    <span>Dirección: 5 Indian Spring Dr. Mundelein, IL 60060</span>
+  </div>
+  <div class="social-icons">
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter"></i></a>
+    <a href="#"><i class="bi bi-instagram"></i></a>
+  </div>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
